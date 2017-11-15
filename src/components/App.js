@@ -34,7 +34,7 @@ import {
 import {routes} from '../routes';
 
 const LeftPanel = (props, context) => (
-    <Panel left="left" reveal="reveal" layout="dark">
+    <Panel left="left" reveal="reveal">
         <View id="left-panel-view" navbarThrough="navbarThrough" dynamicNavbar="true">
             {context.framework7AppContext.theme.ios ? <Navbar title="Left Panel"/> : null}
             <Pages>
@@ -64,7 +64,7 @@ LeftPanel.contextTypes = {
 };
 
 const RightPanel = (props, context) => (
-    <Panel right="right" cover="cover" layout="dark">
+    <Panel right="right" cover="cover">
         <View id="right-panel-view" navbarThrough="navbarThrough" dynamicNavbar={true}>
             {context.framework7AppContext.theme.ios ? <Navbar title="Right Panel" sliding="sliding"/> : null}
             <Pages>
