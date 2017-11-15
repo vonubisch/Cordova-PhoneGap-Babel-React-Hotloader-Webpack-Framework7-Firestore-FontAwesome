@@ -6,6 +6,7 @@ const ENV = require('./env');
 const PATHS = {
   src: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'www'),
+  framework7: path.join(__dirname, 'node_modules/framework7'),
 };
 
 process.env.BABEL_ENV = ENV;
@@ -22,6 +23,11 @@ const common = {
         test: /\.css$/,
         loaders: ['style', 'css?url=false'],
         include: PATHS.src,
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css?url=false'],
+        include: PATHS.framework7,
       },
       {
         test: /\.jsx?$/,
