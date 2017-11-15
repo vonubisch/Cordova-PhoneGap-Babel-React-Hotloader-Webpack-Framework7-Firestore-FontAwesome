@@ -32,12 +32,11 @@ export class Form extends Component {
         };
     }
 
-    // onRadioChange(value) {
-    //     this.setState({
-    //        ...this.state,
-    //        radioSelected: value
-    //     });
-    // }
+    onRadioChange(value) {
+        this.setState({
+           radioSelected: value
+        });
+    }
 
     render() {
         return (<Page>
