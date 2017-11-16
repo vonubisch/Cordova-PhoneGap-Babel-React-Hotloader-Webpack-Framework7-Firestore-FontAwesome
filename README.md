@@ -23,6 +23,18 @@ Things to do:
 - Add more babel config ??
 - Demo more UI stuff with OnsenUI-react
 
+## Build the app for production
+Firestore config
+
+    const firebaseConfig = {
+        apiKey: "xxx",
+        authDomain: "xxx.firebaseapp.com",
+        databaseURL: "https://xxx.firebaseio.com",
+        projectId: "xxx",
+        storageBucket: "xxx.appspot.com",
+        messagingSenderId: ""
+    };
+
 ## Start application
 Run via the CLI:
 ```
