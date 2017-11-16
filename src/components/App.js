@@ -9,13 +9,6 @@ import {
 
 import createContainer from 'firestore-react';
 
-import firebase from "firebase";
-import "firebase/firestore";
-
-import firebaseConfig from '../config/firebase.config';
-
-firebase.initializeApp(firebaseConfig);
-
 import {routes} from '../routes';
 
 import LeftPanel from '../components/LeftPanel';
@@ -24,7 +17,7 @@ import MainViews from '../components/Main';
 import AppPopup from '../components/Main';
 import AppLoginScreen from '../components/Login';
 
-export const AppBase = (props) => {
+const Application = (props) => {
     console.log(props); // eslint-disable-line no-console
 
     if (!props.users.loading) {
@@ -46,11 +39,11 @@ export const AppBase = (props) => {
     );
 };
 
-AppBase.propTypes = {
+Application.propTypes = {
     users: PropTypes.object,
 };
 
-export const App = createContainer(AppBase, (db) => {
+export const App = createContainer(Application, (db) => {
     return {
         users: db.collection('users')
     };
