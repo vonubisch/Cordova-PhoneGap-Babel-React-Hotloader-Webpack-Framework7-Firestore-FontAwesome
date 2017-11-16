@@ -66,3 +66,7 @@ This will switch your config.xml file to production mode, build the app bundle t
 Then you can run Cordova / PhoneGap like `phonegap serve` or `cordova run ios`
 
 Now you can use the PhoneGap developer app or browser to view your app.
+
+## Repo's used
+- [framework7-react-app-template](https://github.com/bencompton/framework7-react-app-template)
+- [phonegap-template-react-hot-loader](https://github.com/phonegap/phonegap-template-react-hot-loader)
