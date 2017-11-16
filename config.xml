@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>helloworld</name>
+<widget id="com.vonubisch.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>vonUbisch App</name>
     <description>
-    Hello World sample application using React, Webpack and Hot Reloading.
+    Kitchensink/Boilerplate for Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome
   </description>
-    <author email="support@phonegap.com" href="https://github.com/JedWatson">
-    Jed Watson and the PhoneGap Team
+    <author email="info@vonubisch.com" href="https://github.com/vonubisch">
+    Björn S. von Ubisch - vonUbisch.com
   </author>
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
