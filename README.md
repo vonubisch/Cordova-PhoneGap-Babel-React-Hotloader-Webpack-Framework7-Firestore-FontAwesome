@@ -1,4 +1,4 @@
-# Kitchensink/Boilerplate for Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-FontAwesome
+# Kitchensink/Boilerplate for Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome
 Template for ready-to-use hybrid mobile apps with native look.
 
 ## Tools
@@ -33,18 +33,11 @@ Things to do:
 ## Start application
 Run via the CLI:
 ```
+git clone git@github.com:vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome.git my-app
 npm install
 npm run start
 ```
-Find out which modules are missing... Then a couple more:
-```
-npm install missing-module
-```
-Then a couple more tries at:
-```
-npm run start
-```
-Then open the browser at something like:
+Then open the browser at:
 ```
 http://localhost:8080
 ```
