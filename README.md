@@ -20,7 +20,8 @@ Android                    |  iOS
 
 ## Start application
 Setup Firestore configuration in `/src/config/firebase.config.js`
-Initialize to folder `my-app`:
+
+Initialize project in folder `my-app`:
 ```
 git clone git@github.com:vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome.git my-app
 ```
@@ -49,12 +50,14 @@ npm run build [ -- ios || android]
 npm run prepare -- ios
 npm run prepare -- android
 ```
-This will switch your config.xml file to production mode, build the app bundle to `www` using Webpack and run `cordova build` for you.
+Now your `config.xml` switches file to production mode.
+It will build the app bundle to `www` using Webpack and run `cordova build` for you.
 
-`phonegap serve` or `cordova run ios`
+Start PhoneGap server:
+`phonegap serve`
 
-Now you can use the PhoneGap Developer App or browser to view your app.
-Use [PhoneGap Build](https://build.phonegap.com/) CLI or Cloud tools to build the app for production.
+Now you can use the [PhoneGap Developer App](http://docs.phonegap.com/getting-started/2-install-mobile-app/) or browser to view your app.
+Use [PhoneGap Build](https://build.phonegap.com/) `CLI` or `Cloud` tools to build for production.
 
 ## Repo's used
 - [framework7-react-app-template](https://github.com/bencompton/framework7-react-app-template)
