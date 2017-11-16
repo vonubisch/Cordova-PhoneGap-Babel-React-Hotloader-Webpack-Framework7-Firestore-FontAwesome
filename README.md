@@ -14,11 +14,12 @@ Not all are correctly implemented/configured yet.
 - Framework7 - *CSS framework native iOS/Android*
 - FontAwesome - *good old icons*
 
-## This repo is not ready, yet
+## This repo is kinda ready for use
 Things to do:
 - Demo Firestore
 - Demo more UI stuff with Framework7
-- Cleanup
+- Cleanup node_modules
+- Figure out if actually builds to an app
 
 ## Firestore config
     const firebaseConfig = {
