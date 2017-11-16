@@ -1,21 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types'; // ES6
-
+import React           from 'react';
+import PropTypes       from 'prop-types'; // ES6
+import createContainer from 'firestore-react';
 import {
     Framework7App,
     Statusbar,
     Progressbar
-} from 'framework7-react';
+}                      from 'framework7-react';
 
-import createContainer from 'firestore-react';
-
-import {routes} from '../routes';
-
-import LeftPanel from '../components/LeftPanel';
-import RightPanel from '../components/RightPanel';
-import MainViews from '../components/Main';
-import AppPopup from '../components/Main';
-import AppLoginScreen from '../components/Login';
+import {routes}        from '../routes';
+import LeftPanel       from '../components/LeftPanel';
+import RightPanel      from '../components/RightPanel';
+import MainViews       from '../components/Main';
+import AppPopup        from '../components/Popup';
+import AppLoginScreen  from '../components/Login';
 
 const Application = (props) => {
     console.log(props); // eslint-disable-line no-console
