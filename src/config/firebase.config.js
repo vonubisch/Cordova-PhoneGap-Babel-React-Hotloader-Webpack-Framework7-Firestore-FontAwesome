@@ -1,15 +1,10 @@
-import * as firebase from "firebase";
-import "firebase/firestore";
-
 const firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
+    apiKey: "xxx",
+    authDomain: "xxx.firebaseapp.com",
+    databaseURL: "https://xxx.firebaseio.com",
+    projectId: "xxx",
+    storageBucket: "xxx.appspot.com",
     messagingSenderId: ""
 };
 
-firebase.initializeApp(firebaseConfig);
-
-export default firebase;
+export default firebaseConfig;

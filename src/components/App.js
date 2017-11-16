@@ -32,7 +32,13 @@ import {
 } from 'framework7-react';
 
 import createContainer from 'firestore-react';
-// import firebaseConfig from "../config/firebase.config";
+
+import firebase from "firebase";
+import "firebase/firestore";
+
+import firebaseConfig from '../config/firebase.config';
+
+firebase.initializeApp(firebaseConfig);
 
 import {routes} from '../routes';
 
@@ -107,7 +113,7 @@ const MainViews = (props, context) => {
                             <NavLeft>
                                 <Link icon="icon-bars" openPanel="left"/>
                             </NavLeft>
-                            <NavCenter sliding="sliding">Framework7</NavCenter>
+                            <NavCenter sliding="sliding">Framework7!</NavCenter>
                             <NavRight>
                                 <Link icon="icon-bars" openPanel="right"/>
                             </NavRight>
@@ -123,7 +129,7 @@ const MainViews = (props, context) => {
                                     <NavLeft>
                                         <Link icon="icon-bars" openPanel="left"/>
                                     </NavLeft>
-                                    <NavCenter sliding="sliding">Framework7</NavCenter>
+                                    <NavCenter sliding="sliding">Framework7!</NavCenter>
                                     <NavRight>
                                         <Link icon="icon-bars" openPanel="right"/>
                                     </NavRight>
@@ -219,19 +225,30 @@ const AppLoginScreen = () => (
     </LoginScreen>
 );
 
-export const App = () => (
-//Change themeType to "material" to use the Material theme
-    <Framework7App themeType="material" routes={routes}>
-        <Statusbar/>
-        <LeftPanel/>
-        <RightPanel/>
-        <MainViews/>
-        <AppPopup/>
-        <AppLoginScreen/>
-    </Framework7App>
-);
+export const AppBase = (props) => {
+    console.log(props);
 
-export const AppBase = createContainer(AppBase, (db) => {
+    if (props.users.loading) {
+        return <span>Loading</span>;
+    }
+
+    props.users.snapshot.forEach(doc => {
+      console.log(doc.data());
+    });
+
+    return (
+        <Framework7App themeType="material" routes={routes}>
+            <Statusbar/>
+            <LeftPanel/>
+            <RightPanel/>
+            <MainViews/>
+            <AppPopup/>
+            <AppLoginScreen/>
+        </Framework7App>
+    );
+};
+
+export const App = createContainer(AppBase, (db) => {
     return {
         users: db.collection('users')
     };
