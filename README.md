@@ -8,23 +8,16 @@ Android                    |  iOS
 
 ## Tools
 Not all are correctly implemented/configured yet.
-- Apache Cordova - *to compile to iOS and Android Apps*
-- Adobe PhoneGap - *some juicy Cordova tools*
-- React - *DOM ninja*
-- React Hotloading - *No more F5*
-- Babel - *for sexy JS*
-- Firestore - *store files and data*
-- Webpack - *Pack it up*
-- ESlint - *only pretty code*
-- Framework7 - *CSS framework native iOS/Android*
-- FontAwesome - *good old icons*
-
-## This repo is kinda ready for use
-Things to do:
-- Demo Firestore
-- Demo more UI stuff with Framework7
-- Cleanup node_modules
-- Figure out if actually builds to an app
+- [Apache Cordova](https://cordova.apache.org/) - *to compile to iOS and Android Apps*
+- [Adobe PhoneGap](https://phonegap.com/) - *some juicy Cordova tools*
+- [React](https://reactjs.org/) - *DOM ninja*
+- [React Hotloading](https://github.com/gaearon/react-hot-loader) - *No more F5*
+- [Babel](https://github.com/babel/babel) - *for sexy JS*
+- [Firestore](https://firebase.google.com/docs/firestore/) - *store files and data*
+- [Webpack](https://github.com/webpack/webpack) - *Pack it up*
+- [ESlint](https://github.com/eslint/eslint) - *only pretty code*
+- [Framework7](https://github.com/bencompton/framework7-react) - *CSS framework native iOS/Android*
+- [FontAwesome](https://github.com/FortAwesome/Font-Awesome) - *good old icons*
 
 ## Firestore config
     const firebaseConfig = {
@@ -47,6 +40,7 @@ Then open the browser at:
 ```
 http://localhost:8080
 ```
+Setup Firestore configuration in /src/config/firebase.config.js
 
 ## Build the app for production
 Make sure Cordova has its platforms
