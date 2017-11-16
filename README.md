@@ -16,16 +16,11 @@ Not all are correctly implemented/configured yet.
 
 ## This repo is not ready, yet
 Things to do:
-- Add missing modules to package.json
-- Make sure latest versions are used with NPM - any tool to check latest version and update?
-- Find out how I can reduce size, due to later building by PhoneGap, so exclude (which) node_modules?
-- Clean up webpack config ??
-- Add more babel config ??
-- Demo more UI stuff with OnsenUI-react
+- Demo Firestore
+- Demo more UI stuff with Framework7
+- Cleanup
 
-## Build the app for production
-Firestore config
-
+## Firestore config
     const firebaseConfig = {
         apiKey: "xxx",
         authDomain: "xxx.firebaseapp.com",
