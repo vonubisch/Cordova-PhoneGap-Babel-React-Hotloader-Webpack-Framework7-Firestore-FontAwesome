@@ -54,6 +54,7 @@ This will switch your config.xml file to production mode, build the app bundle t
 `phonegap serve` or `cordova run ios`
 
 Now you can use the PhoneGap Developer App or browser to view your app.
+Use [PhoneGap Build](https://build.phonegap.com/) CLI or Cloud tools to build the app for production.
 
 ## Repo's used
 - [framework7-react-app-template](https://github.com/bencompton/framework7-react-app-template)
