@@ -59,3 +59,15 @@ typings/
 
 # firebase config
 src/config/firebase.config.js
+
+platforms
+plugins
+node_modules/
+platforms/
+plugins/
+www/bundle.js
+www/*.eot
+www/*.woff2
+www/*.ttf
+www/*.woff
+www/*.svg
