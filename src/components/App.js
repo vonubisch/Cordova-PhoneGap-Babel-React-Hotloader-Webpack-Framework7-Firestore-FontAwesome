@@ -248,6 +248,10 @@ export const AppBase = (props) => {
     );
 };
 
+AppBase.propTypes = {
+    users: PropTypes.object,
+};
+
 export const App = createContainer(AppBase, (db) => {
     return {
         users: db.collection('users')
