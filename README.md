@@ -7,6 +7,7 @@ Android                    |  iOS
 ![Material](https://raw.github.com/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome/master/res/demo/preview-android.png)  |  ![iOS](https://raw.github.com/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome/master/res/demo/preview-ios.png)
 
 ## Tools
+- [NodeJS](https://nodejs.org/) - *see all of below*
 - [Apache Cordova](https://cordova.apache.org/) - *to compile to iOS and Android Apps*
 - [Adobe PhoneGap](https://phonegap.com/) - *some juicy Cordova tools*
 - [React](https://reactjs.org/) - *DOM ninja*
