@@ -73,13 +73,6 @@ export class Form extends Component {
                     <FormInput type="datetime-local"/>
                 </ListItem>
                 <ListItem>
-                    <FormLabel>Gender</FormLabel>
-                    <FormInput type="select">
-                        <option value="1">Male</option>
-                        <option value="1">Female</option>
-                    </FormInput>
-                </ListItem>
-                <ListItem>
                     <FormLabel>Switch</FormLabel>
                     <FormInput type="switch" onChange={onChangeHandler}/>
                 </ListItem>
@@ -140,7 +133,7 @@ export class Form extends Component {
                                 radio="radio"
                                 key={n}
                                 name="my-radio"
-                                checked={n === this.state.radioSelected}
+                                defaultChecked={n === this.state.radioSelected}
                                 value={n}
                                 title={`Radio ${n}`}
                                 onChange={() => {
