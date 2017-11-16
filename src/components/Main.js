@@ -32,7 +32,7 @@ const MainViews = (props, context) => {
                             <NavLeft>
                                 <Link icon="icon-bars" openPanel="left"/>
                             </NavLeft>
-                            <NavCenter sliding="sliding">Framework7!</NavCenter>
+                            <NavCenter sliding="sliding">Framework7</NavCenter>
                             <NavRight>
                                 <Link icon="icon-bars" openPanel="right"/>
                             </NavRight>
@@ -56,11 +56,10 @@ const MainViews = (props, context) => {
                                 : null
                         }
                         <ContentBlockTitle>
-                            <Icon fa="home"/>
+                            <Icon fa="home" style={{marginRight: 10}}/>
                             Welcome to my App
                         </ContentBlockTitle>
                         <ContentBlock inner="inner">
-
                             <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
                         </ContentBlock>
                         <ContentBlockTitle>Navigation</ContentBlockTitle>

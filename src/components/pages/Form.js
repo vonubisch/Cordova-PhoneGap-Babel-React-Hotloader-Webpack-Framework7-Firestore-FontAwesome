@@ -22,11 +22,14 @@ const pStyle = {
     margin: '1em 0'
 };
 
-export class Form extends Component {
+export class Form extends React.Component {
     constructor(props, context) {
         super(props, context);
 
         this.state = {
+            form: {
+                name: '',
+            },
             birthDate: '2014-04-30',
             radioSelected: 1
         };
@@ -38,7 +41,16 @@ export class Form extends Component {
         });
     }
 
+    change(event, field) {
+        this.setState({form: {[field]: event.target.value}});
+    }
+    value(field) {
+        return this.state.form[field] || '';
+    }
+
     render() {
+
+    console.log(this.state);
         return (<Page>
             <Navbar backLink="Back" title="Forms" sliding="sliding"/>
 
@@ -46,7 +58,7 @@ export class Form extends Component {
             <List form="form">
                 <ListItem>
                     <FormLabel>Name</FormLabel>
-                    <FormInput type="text" placeholder="Name"/>
+                    <FormInput type="text" placeholder="Name" value={this.value('name')} onChange={e => this.change(e, 'name')}/>
                 </ListItem>
                 <ListItem>
                     <FormLabel>Password</FormLabel>
@@ -133,8 +145,7 @@ export class Form extends Component {
                                 radio="radio"
                                 key={n}
                                 name="my-radio"
-                                defaultChecked={n === this.state.radioSelected}
-                                value={n}
+                                value={this.state.radioSelected}
                                 title={`Radio ${n}`}
                                 onChange={() => {
                                     this.onRadioChange(n);

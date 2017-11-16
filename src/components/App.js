@@ -14,27 +14,45 @@ import MainViews       from '../components/Main';
 import AppPopup        from '../components/Popup';
 import AppLoginScreen  from '../components/Login';
 
-const Application = (props) => {
-    console.log(props); // eslint-disable-line no-console
 
-    if (!props.users.loading) {
-        props.users.snapshot.forEach(doc => {
-          console.log(doc.data()); // eslint-disable-line no-console
-        });
+class Application extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false
+        };
     }
 
-    return (
-        <Framework7App themeType="material" routes={routes}>
-            <Statusbar/>
-            {(props.users.loading) ? <Progressbar infinite color="blue" /> : null}
-            <LeftPanel/>
-            <RightPanel/>
-            <MainViews/>
-            <AppPopup/>
-            <AppLoginScreen/>
-        </Framework7App>
-    );
-};
+    componentWillReceiveProps(props) {
+        console.log("componentWillReceiveProps", props);
+        if (props.users) {
+            console.log(props.users.loading);
+            this.setState({loading: props.users.loading || false});
+            if (!props.users.loading) {
+                props.users.snapshot.forEach(doc => {
+                    console.log(doc.data()); // eslint-disable-line no-console
+                });
+            }
+        }
+    }
+
+    render() {
+        console.log(this.props, this.state); // eslint-disable-line no-console
+        return (
+            <Framework7App themeType="material" routes={routes}>
+                <Statusbar/>
+                {(this.state.loading) ? <Progressbar infinite color="blue" /> : null}
+                <LeftPanel/>
+                <RightPanel/>
+                <MainViews/>
+                <AppPopup/>
+                <AppLoginScreen/>
+            </Framework7App>
+        );
+    }
+
+}
 
 Application.propTypes = {
     users: PropTypes.object,
