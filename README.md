@@ -20,18 +20,23 @@ Android                    |  iOS
 
 ## Start application
 Setup Firestore configuration in `/src/config/firebase.config.js`
+Initialize to folder `my-app`:
 ```
 git clone git@github.com:vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome.git my-app
+```
+Install dependencies:
+```
 npm install
+```
+Compile and start server:
+```
 npm run start
 ```
 Open browser at:
 ```
 http://localhost:8080
 ```
-
-
-## Build the app for production
+## Build app for production
 Add Cordova platforms:
 ```
 cordova platform add android
