@@ -31,6 +31,9 @@ import {
     FormInput
 } from 'framework7-react';
 
+import createContainer from 'firestore-react';
+// import firebaseConfig from "../config/firebase.config";
+
 import {routes} from '../routes';
 
 const LeftPanel = (props, context) => (
@@ -227,3 +230,9 @@ export const App = () => (
         <AppLoginScreen/>
     </Framework7App>
 );
+
+export const AppBase = createContainer(AppBase, (db) => {
+    return {
+        users: db.collection('users')
+    };
+});

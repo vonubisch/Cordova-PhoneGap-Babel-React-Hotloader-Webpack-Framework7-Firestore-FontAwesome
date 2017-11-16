@@ -23,18 +23,18 @@ const common = {
             {
                 test: /\.css$/,
                 loaders: [
-                    'style', 'css?url=false'
+                    'style-loader', 'css-loader?url=false'
                 ],
                 include: PATHS.src
             }, {
                 test: /\.css$/,
                 loaders: [
-                    'style', 'css?url=false'
+                    'style-loader', 'css-loader?url=false'
                 ],
                 include: PATHS.framework7
             }, {
                 test: /\.jsx?$/,
-                loader: 'babel?cacheDirectory',
+                loader: 'babel-loader?cacheDirectory',
                 include: PATHS.src
             }, {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
