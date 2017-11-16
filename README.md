@@ -1,6 +1,9 @@
 # Kitchensink/Boilerplate for Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome
 Template for ready-to-use hybrid mobile apps with native look.
 
+## Preview
+![Material](https://raw.github.com/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome/master/res/demo/preview-android.png)
+
 ## Tools
 Not all are correctly implemented/configured yet.
 - Apache Cordova - *to compile to iOS and Android Apps*
