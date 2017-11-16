@@ -7,7 +7,6 @@ Android                    |  iOS
 ![Material](https://raw.github.com/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome/master/res/demo/preview-android.png)  |  ![iOS](https://raw.github.com/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome/master/res/demo/preview-ios.png)
 
 ## Tools
-Not all are correctly implemented/configured yet.
 - [Apache Cordova](https://cordova.apache.org/) - *to compile to iOS and Android Apps*
 - [Adobe PhoneGap](https://phonegap.com/) - *some juicy Cordova tools*
 - [React](https://reactjs.org/) - *DOM ninja*
@@ -19,37 +18,27 @@ Not all are correctly implemented/configured yet.
 - [Framework7](https://github.com/bencompton/framework7-react) - *CSS framework native iOS/Android*
 - [FontAwesome](https://github.com/FortAwesome/Font-Awesome) - *good old icons*
 
-## Firestore config
-    const firebaseConfig = {
-        apiKey: "xxx",
-        authDomain: "xxx.firebaseapp.com",
-        databaseURL: "https://xxx.firebaseio.com",
-        projectId: "xxx",
-        storageBucket: "xxx.appspot.com",
-        messagingSenderId: ""
-    };
-
 ## Start application
-Run via the CLI:
+Setup Firestore configuration in `/src/config/firebase.config.js`
 ```
 git clone git@github.com:vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome.git my-app
 npm install
 npm run start
 ```
-Then open the browser at:
+Open browser at:
 ```
 http://localhost:8080
 ```
-Setup Firestore configuration in /src/config/firebase.config.js
+
 
 ## Build the app for production
-Make sure Cordova has its platforms
+Add Cordova platforms:
 ```
 cordova platform add android
 cordova platform add ios
 cordova platform add browser
 ```
-To build the app without the hotreloader:
+Build app:
 ```
 npm run build [ -- ios || android]
 npm run prepare -- ios
@@ -57,9 +46,9 @@ npm run prepare -- android
 ```
 This will switch your config.xml file to production mode, build the app bundle to `www` using Webpack and run `cordova build` for you.
 
-Then you can run Cordova / PhoneGap like `phonegap serve` or `cordova run ios`
+`phonegap serve` or `cordova run ios`
 
-Now you can use the PhoneGap developer app or browser to view your app.
+Now you can use the PhoneGap Developer App or browser to view your app.
 
 ## Repo's used
 - [framework7-react-app-template](https://github.com/bencompton/framework7-react-app-template)
