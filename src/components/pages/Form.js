@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
     Page,
     Navbar,
@@ -49,8 +49,6 @@ export class Form extends React.Component {
     }
 
     render() {
-
-    console.log(this.state);
         return (<Page>
             <Navbar backLink="Back" title="Forms" sliding="sliding"/>
 
