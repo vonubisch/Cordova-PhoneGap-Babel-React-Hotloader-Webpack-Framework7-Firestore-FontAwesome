@@ -21,19 +21,19 @@ const AppLoginScreen = () => (
                 <Page loginScreen="loginScreen">
                     <LoginScreenTitle>Login</LoginScreenTitle>
                     <List form="form">
-                        <ListItem key={0}>
+                        <ListItem>
                             <FormLabel>Username</FormLabel>
                             <FormInput name="username" placeholder="Username" type="text"/>
                         </ListItem>
-                        <ListItem key={1}>
+                        <ListItem>
                             <FormLabel>Password</FormLabel>
                             <FormInput name="password" type="password" placeholder="Password"/>
                         </ListItem>
                     </List>
                     <List>
-                        <Button key={0} closeLoginScreen="closeLoginScreen" fill big>Button Text</Button>
-                        <ListButton key={1} title="Sign In" closeLoginScreen="closeLoginScreen"/>
-                        <ListLabel key={2}>
+                        <Button closeLoginScreen="closeLoginScreen" fill big>Button Text</Button>
+                        <ListButton title="Sign In" closeLoginScreen="closeLoginScreen"/>
+                        <ListLabel>
                             <p>Click Sign In to close Login Screen</p>
                         </ListLabel>
                     </List>
