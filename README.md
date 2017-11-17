@@ -1,4 +1,5 @@
 # Kitchensink/Boilerplate for Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome
+![](https://img.shields.io/github/issues/vonubisch/Cordova-PhoneGap-Babel-React-Hotloader-Webpack-Framework7-Firestore-FontAwesome.svg)
 Template for ready-to-use hybrid mobile apps with native look.
 
 ## Preview
