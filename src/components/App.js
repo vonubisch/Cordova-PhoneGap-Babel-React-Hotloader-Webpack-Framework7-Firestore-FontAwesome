@@ -25,9 +25,9 @@ class Application extends React.Component {
     }
 
     componentWillReceiveProps(props) {
-        console.log("componentWillReceiveProps", props);
+        console.log("componentWillReceiveProps", props); // eslint-disable-line no-console
         if (props.users) {
-            console.log(props.users.loading);
+            console.log(props.users.loading); // eslint-disable-line no-console
             this.setState({loading: props.users.loading || false});
             if (!props.users.loading) {
                 props.users.snapshot.forEach(doc => {
