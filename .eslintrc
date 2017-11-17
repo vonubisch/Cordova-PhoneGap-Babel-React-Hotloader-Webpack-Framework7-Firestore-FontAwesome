@@ -4,14 +4,11 @@
         "node": true,
         "browser": true
     },
-
     "plugins": [
         "react",
         "import"
     ],
-
     "extends": ["eslint:recommended", "plugin:react/recommended"],
-
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
@@ -21,11 +18,9 @@
         },
         "sourceType" : "module"
     },
-
     "settings" : {
         "import/resolver" : { "node" : { "moduleDirectory" : ["lib/nodejs", "node_modules", "bower_components"] } }
     },
-
     "rules": {
         "accessor-pairs": 2,
         "array-bracket-spacing": 0,
@@ -69,7 +64,6 @@
         "indent": 0,
         "init-declarations": 0,
         "jsx-quotes": 2,
-
         "key-spacing": [0, {
             "singleLine": {
                 "beforeColon": false,
@@ -81,7 +75,6 @@
                 "align": "colon"
             }
         }],
-
         "keyword-spacing": [
             2, {
                 "before": true,
@@ -229,7 +222,6 @@
         "wrap-regex": 0,
         "yield-star-spacing": 2,
         "yoda": 0,
-
         "react/display-name": 0,
         "react/jsx-boolean-value": 0,
         "react/jsx-closing-bracket-location": 1,
@@ -253,7 +245,6 @@
         "react/self-closing-comp": 1,
         "react/sort-comp": 1,
         "react/jsx-wrap-multilines": 1,
-
         "import/named" : 1,
         "import/no-unresolved" : [1, { "commonjs": true, "amd": true }],
         "import/namespace": 1,
