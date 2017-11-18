@@ -17,7 +17,7 @@ const LeftPanel = (props, context) => (
         <View id="left-panel-view" navbarThrough="navbarThrough" dynamicNavbar="true">
             {context.framework7AppContext.theme.ios ? <Navbar title="Left Panel"/> : null}
             <Pages>
-                <Page key={2}>
+                <Page>
                     {context.framework7AppContext.theme.material ? <Navbar title="Left Panel"/> : null}
                     <ContentBlock inner="inner">
                         <p>Left panel content goes here</p>
@@ -26,11 +26,13 @@ const LeftPanel = (props, context) => (
                     <List>
                         <ListItem link="/about/" title="About"/>
                         <ListItem link="/form/" title="Form"/>
+                        <ListItem link="/firebase-test/" title="Firebase test"/>
                     </List>
                     <ContentBlockTitle>Load page in main view</ContentBlockTitle>
                     <List>
                         <ListItem link="/about/" title="About" linkView="#main-view" linkClosePanel="linkClosePanel"/>
                         <ListItem link="/form/" title="Form" linkView="#main-view" linkClosePanel="linkClosePanel"/>
+                        <ListItem link="/firebase-test/" title="Firebase test" linkView="#main-view" linkClosePanel="linkClosePanel"/>
                     </List>
                 </Page>
             </Pages>

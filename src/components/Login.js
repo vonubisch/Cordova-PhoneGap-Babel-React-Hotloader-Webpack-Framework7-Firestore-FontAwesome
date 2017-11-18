@@ -17,7 +17,7 @@ import {
 const AppLoginScreen = () => (
     <LoginScreen id="login-screen">
         <View>
-            <Pages key={4}>
+            <Pages>
                 <Page loginScreen="loginScreen">
                     <LoginScreenTitle>Login</LoginScreenTitle>
                     <List form="form">

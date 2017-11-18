@@ -1,6 +1,4 @@
 import React           from 'react';
-import PropTypes       from 'prop-types'; // ES6
-import createContainer from 'firestore-react';
 import {
     Framework7App,
     Statusbar,
@@ -15,7 +13,7 @@ import AppPopup        from '../components/Popup';
 import AppLoginScreen  from '../components/Login';
 
 
-class Application extends React.Component {
+export class App extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,21 +22,12 @@ class Application extends React.Component {
         };
     }
 
-    componentWillReceiveProps(props) {
-        console.log("componentWillReceiveProps", props); // eslint-disable-line no-console
-        if (props.users) {
-            console.log(props.users.loading); // eslint-disable-line no-console
-            this.setState({loading: props.users.loading || false});
-            if (!props.users.loading) {
-                props.users.snapshot.forEach(doc => {
-                    console.log(doc.data()); // eslint-disable-line no-console
-                });
-            }
-        }
+    loading(loading) {
+        this.setState({loading});
     }
 
     render() {
-        console.log(this.props, this.state); // eslint-disable-line no-console
+        // console.log(this.props, this.state); // eslint-disable-line no-console
         return (
             <Framework7App themeType="material" routes={routes}>
                 <Statusbar/>
@@ -53,13 +42,3 @@ class Application extends React.Component {
     }
 
 }
-
-Application.propTypes = {
-    users: PropTypes.object,
-};
-
-export const App = createContainer(Application, (db) => {
-    return {
-        users: db.collection('users')
-    };
-});

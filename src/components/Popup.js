@@ -14,7 +14,7 @@ const AppPopup = () => (
     <Popup id="popup">
         <View navbarFixed="navbarFixed">
             <Pages>
-                <Page key={3}>
+                <Page>
                     <Navbar title="Popup">
                         <NavRight>
                             <Link closePopup="closePopup">Close</Link>
