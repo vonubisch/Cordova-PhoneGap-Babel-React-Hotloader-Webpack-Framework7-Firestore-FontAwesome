@@ -5,12 +5,12 @@ import {
     Progressbar
 }                      from 'framework7-react';
 
-import {routes}        from '../routes';
-import LeftPanel       from '../components/LeftPanel';
-import RightPanel      from '../components/RightPanel';
-import MainViews       from '../components/Main';
-import AppPopup        from '../components/Popup';
-import AppLoginScreen  from '../components/Login';
+import {routes}        from 'routes';
+import LeftPanel       from 'components/LeftPanel';
+import RightPanel      from 'components/RightPanel';
+import MainViews       from 'components/Main';
+import AppPopup        from 'components/Popup';
+import AppLoginScreen  from 'components/Login';
 
 
 export class App extends React.Component {
@@ -18,7 +18,8 @@ export class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false
+            loading: false,
+            popupOpened: false,
         };
     }
 
@@ -35,7 +36,7 @@ export class App extends React.Component {
                 <LeftPanel/>
                 <RightPanel/>
                 <MainViews/>
-                <AppPopup/>
+                <AppPopup opened={this.state.popupOpened}/>
                 <AppLoginScreen/>
             </Framework7App>
         );

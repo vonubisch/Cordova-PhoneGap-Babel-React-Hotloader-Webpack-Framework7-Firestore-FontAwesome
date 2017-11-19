@@ -1,4 +1,5 @@
-import React from 'react';
+import React     from 'react';
+import PropTypes from 'prop-types';
 import {
     View,
     Navbar,
@@ -10,8 +11,8 @@ import {
     Popup,
 } from 'framework7-react';
 
-const AppPopup = () => (
-    <Popup id="popup">
+const AppPopup = (props) => (
+    <Popup id="popup" opened={props.opened}>
         <View navbarFixed="navbarFixed">
             <Pages>
                 <Page>
@@ -26,5 +27,9 @@ const AppPopup = () => (
         </View>
     </Popup>
 );
+
+AppPopup.propTypes = {
+    opened: PropTypes.bool,
+};
 
 export default AppPopup;
