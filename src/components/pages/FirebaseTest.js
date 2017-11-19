@@ -10,7 +10,7 @@ import {
     Badge,
 } from 'framework7-react';
 
-import {loading} from '../../utils';
+import {loading} from 'utils';
 
 export class FirebaseTestBase extends React.Component {
 
