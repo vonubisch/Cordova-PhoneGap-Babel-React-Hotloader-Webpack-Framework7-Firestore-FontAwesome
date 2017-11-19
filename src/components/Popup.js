@@ -18,7 +18,7 @@ const AppPopup = (props) => (
                 <Page>
                     <Navbar title="Popup">
                         <NavRight>
-                            <Link closePopup="closePopup">Close</Link>
+                            <Link closePopup="closePopup" onClick={() => props.popup(false)}>Close</Link>
                         </NavRight>
                     </Navbar>
                     <ContentBlock>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</ContentBlock>
@@ -30,6 +30,7 @@ const AppPopup = (props) => (
 
 AppPopup.propTypes = {
     opened: PropTypes.bool,
+    popup: PropTypes.func,
 };
 
 export default AppPopup;

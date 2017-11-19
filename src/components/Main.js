@@ -90,7 +90,7 @@ class MainViews extends React.Component {
                             <ContentBlock>
                                 <GridRow>
                                     <GridCol width={50}>
-                                        <Button openPopup="#popup">Popup</Button>
+                                        <Button openPopup="#popup" onClick={() => this.props.popup(true)}>Popup</Button>
                                     </GridCol>
                                     <GridCol width={50}>
                                         <Button openLoginScreen="#login-screen">Login Screen</Button>
@@ -112,6 +112,7 @@ MainViews.contextTypes = {
 MainViews.propTypes = {
     users: PropTypes.object,
     loading: PropTypes.func,
+    popup: PropTypes.func,
 };
 
 export default MainViews;

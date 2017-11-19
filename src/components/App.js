@@ -21,10 +21,15 @@ export class App extends React.Component {
             loading: false,
             popupOpened: false,
         };
+        this.popup = this.popup.bind(this);
     }
 
     loading(loading) {
         this.setState({loading});
+    }
+
+    popup(popupOpened) {
+        this.setState({popupOpened});
     }
 
     render() {
@@ -35,8 +40,8 @@ export class App extends React.Component {
                 {(this.state.loading) ? <Progressbar infinite color="blue" /> : null}
                 <LeftPanel/>
                 <RightPanel/>
-                <MainViews/>
-                <AppPopup opened={this.state.popupOpened}/>
+                <MainViews popup={this.popup}/>
+                <AppPopup popup={this.popup} opened={this.state.popupOpened}/>
                 <AppLoginScreen/>
             </Framework7App>
         );
