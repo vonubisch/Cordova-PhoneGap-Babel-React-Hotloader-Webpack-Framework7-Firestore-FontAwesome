@@ -28,13 +28,11 @@ const RightPanel = (props, context) => {
                         <List>
                             <ListItem link="/about/" title="About"/>
                             <ListItem link="/form/" title="Form"/>
-                            <ListItem link="/firebase-test/" title="Firebase test"/>
                         </List>
                         <ContentBlockTitle>Load page in main view</ContentBlockTitle>
                         <List>
                             <ListItem link="/about/" title="About" linkView="#main-view" linkClosePanel="linkClosePanel"/>
                             <ListItem link="/form/" title="Form" linkView="#main-view" linkClosePanel="linkClosePanel"/>
-                            <ListItem link="/firebase-test/" title="Firebase test" linkView="#main-view" linkClosePanel="linkClosePanel"/>
                         </List>
                     </Page>
                 </Pages>

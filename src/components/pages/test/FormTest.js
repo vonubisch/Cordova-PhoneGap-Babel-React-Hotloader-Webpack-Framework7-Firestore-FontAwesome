@@ -22,7 +22,7 @@ const pStyle = {
     margin: '1em 0'
 };
 
-export class Form extends React.Component {
+export class FormTest extends React.Component {
     constructor(props, context) {
         super(props, context);
 

@@ -1,5 +1,5 @@
 import {About} from 'components/pages/About';
-import {Form}  from 'components/pages/Form';
+import {FormTest}  from 'components/pages/test/FormTest';
 import {FirebaseTest}  from 'components/pages/test/FirebaseTest';
 import {AccordionTest}  from 'components/pages/test/AccordionTest';
 import {CardTest}  from 'components/pages/test/CardTest';
@@ -18,7 +18,7 @@ export const routes = [{
     component: About
 }, {
     path: '/form/',
-    component: Form
+    component: FormTest
 }, {
     path: '/test/firebase/',
     component: FirebaseTest
