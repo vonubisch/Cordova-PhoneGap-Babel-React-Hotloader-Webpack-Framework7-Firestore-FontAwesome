@@ -12,14 +12,14 @@ import {
 const AppActions = (props) => {
     const close = () => props.actions(false);
     return (
-        <Actions opened={props.opened} close={false}>
+        <Actions opened={props.opened} onActionsClose={close}>
             <ActionsGroup>
-                <ActionsLabel onClick={close}>Hello</ActionsLabel>
-                <ActionsButton onClick={close}>Button 1</ActionsButton>
-                <ActionsButton onClick={close}>Button 2</ActionsButton>
+                <ActionsLabel>Hello</ActionsLabel>
+                <ActionsButton>Button 1</ActionsButton>
+                <ActionsButton>Button 2</ActionsButton>
             </ActionsGroup>
             <ActionsGroup>
-                <ActionsButton color="red" bold="bold" onClick={close}>Cancel</ActionsButton>
+                <ActionsButton color="red" bold="bold">Cancel</ActionsButton>
             </ActionsGroup>
         </Actions>
     );
