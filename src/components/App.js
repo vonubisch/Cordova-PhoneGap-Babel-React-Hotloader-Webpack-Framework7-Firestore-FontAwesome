@@ -11,6 +11,7 @@ import RightPanel      from 'components/RightPanel';
 import MainViews       from 'components/Main';
 import AppPopup        from 'components/Popup';
 import AppLoginScreen  from 'components/Login';
+import AppActions      from 'components/Actions';
 
 let framework7, currentRoute = null;
 
@@ -24,8 +25,10 @@ export class App extends React.Component {
         this.state = {
             loading: false,
             popupOpened: false,
+            actionsOpened: false,
         };
         this.popup = this.popup.bind(this);
+        this.actions = this.actions.bind(this);
     }
 
     loading(loading) {
@@ -34,6 +37,10 @@ export class App extends React.Component {
 
     popup(popupOpened) {
         this.setState({popupOpened});
+    }
+
+    actions(actionsOpened) {
+        this.setState({actionsOpened});
     }
 
     render() {
@@ -49,9 +56,19 @@ export class App extends React.Component {
                 {(this.state.loading) ? <Progressbar infinite color="blue" /> : null}
                 <LeftPanel/>
                 <RightPanel/>
-                <MainViews popup={this.popup}/>
-                <AppPopup popup={this.popup} opened={this.state.popupOpened}/>
+                <MainViews
+                    popup={this.popup}
+                    actions={this.actions}
+                />
+                <AppPopup
+                    popup={this.popup}
+                    opened={this.state.popupOpened}
+                />
                 <AppLoginScreen/>
+                <AppActions
+                    actions={this.actions}
+                    opened={this.state.actionsOpened}
+                />
             </Framework7App>
         );
     }

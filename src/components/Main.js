@@ -72,10 +72,13 @@ class MainViews extends React.Component {
                             <ContentBlockTitle>Modals</ContentBlockTitle>
                             <ContentBlock>
                                 <GridRow>
-                                    <GridCol width={50}>
+                                    <GridCol width={33}>
                                         <Button openPopup="#popup" onClick={() => this.props.popup(true)}>Popup</Button>
                                     </GridCol>
-                                    <GridCol width={50}>
+                                    <GridCol width={33}>
+                                        <Button onClick={() => this.props.actions(true)}>Actions</Button>
+                                    </GridCol>
+                                    <GridCol width={33}>
                                         <Button openLoginScreen="#login-screen">Login Screen</Button>
                                     </GridCol>
                                 </GridRow>
@@ -100,6 +103,7 @@ MainViews.propTypes = {
     users: PropTypes.object,
     loading: PropTypes.func,
     popup: PropTypes.func,
+    actions: PropTypes.func,
 };
 
 export default MainViews;
