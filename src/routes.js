@@ -2,7 +2,9 @@ import {About} from 'components/pages/About';
 import {Form}  from 'components/pages/Form';
 import {FirebaseTest}  from 'components/pages/test/FirebaseTest';
 import {AccordionTest}  from 'components/pages/test/AccordionTest';
+import {CardTest}  from 'components/pages/test/CardTest';
 import {ContactListTest}  from 'components/pages/test/ContactListTest';
+import {PhotoBrowserTest}  from 'components/pages/test/PhotoBrowserTest';
 
 export const routes = [{
     path: '/about/',
@@ -17,6 +19,12 @@ export const routes = [{
     path: '/test/accordion/',
     component: AccordionTest
 }, {
+    path: '/test/card/',
+    component: CardTest
+}, {
     path: '/test/contactlist/',
     component: ContactListTest
+}, {
+    path: '/test/photobrowser/',
+    component: PhotoBrowserTest
 }];
