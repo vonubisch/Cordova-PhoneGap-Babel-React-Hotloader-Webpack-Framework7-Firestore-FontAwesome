@@ -5,6 +5,7 @@ import {
     Navbar,
     Pages,
     Page,
+    Badge,
     ContentBlock,
     ContentBlockTitle,
     Icon,
@@ -69,6 +70,8 @@ class MainViews extends React.Component {
                             <ContentBlock inner="inner">
                                 <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
                             </ContentBlock>
+                            <ContentBlockTitle>Route with parameters</ContentBlockTitle>
+                            <Button href="/route/1/test/2">View route with <Badge>{JSON.stringify({userId: 1, postId: 2})}</Badge></Button>
                             <ContentBlockTitle>Modals</ContentBlockTitle>
                             <ContentBlock>
                                 <GridRow>

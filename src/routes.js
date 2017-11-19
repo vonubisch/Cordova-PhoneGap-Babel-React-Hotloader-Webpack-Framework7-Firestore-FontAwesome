@@ -6,8 +6,12 @@ import {CardTest}  from 'components/pages/test/CardTest';
 import {ContactListTest}  from 'components/pages/test/ContactListTest';
 import {PhotoBrowserTest}  from 'components/pages/test/PhotoBrowserTest';
 import {MessagesTest}  from 'components/pages/test/MessagesTest';
+import {RouteTest}  from 'components/pages/test/RouteTest';
 
 export const routes = [{
+    path: '/route/:userId/test/:postId/',
+    component: RouteTest
+}, {
     path: '/about/',
     component: About
 }, {
