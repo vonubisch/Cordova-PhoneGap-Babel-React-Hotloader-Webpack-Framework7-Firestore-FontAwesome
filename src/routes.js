@@ -8,6 +8,7 @@ import {PhotoBrowserTest}  from 'components/pages/test/PhotoBrowserTest';
 import {MessagesTest}  from 'components/pages/test/MessagesTest';
 import {RouteTest}  from 'components/pages/test/RouteTest';
 import {SearchTest} from 'components/pages/test/SearchTest';
+import {ChipTest} from 'components/pages/test/ChipTest';
 
 export const routes = [{
     path: '/route/:userId/test/:postId/',
@@ -39,4 +40,7 @@ export const routes = [{
 }, {
     path: '/test/search/',
     component: SearchTest
+}, {
+    path: '/test/chip/',
+    component: ChipTest
 }];
