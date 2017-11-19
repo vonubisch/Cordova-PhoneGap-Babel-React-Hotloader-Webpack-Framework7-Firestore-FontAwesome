@@ -67,6 +67,7 @@ if (ENV === 'development') {
             host: process.env.HOST,
             port: process.env.PORT
         },
+        devtool: '#eval-source-map',
         plugins: [new webpack.HotModuleReplacementPlugin()]
     });
 } else {
