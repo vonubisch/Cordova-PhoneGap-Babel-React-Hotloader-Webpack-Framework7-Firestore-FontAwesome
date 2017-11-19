@@ -69,21 +69,6 @@ class MainViews extends React.Component {
                             <ContentBlock inner="inner">
                                 <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
                             </ContentBlock>
-                            <ContentBlockTitle>Navigation</ContentBlockTitle>
-                            <List>
-                                {routes.map((route, i) => <ListItem key={i} link={route.path} title={route.path}/>)}
-                            </List>
-                            <ContentBlockTitle>Side Panels</ContentBlockTitle>
-                            <ContentBlock>
-                                <GridRow>
-                                    <GridCol width={50}>
-                                        <Button openPanel="left">Left Panel</Button>
-                                    </GridCol>
-                                    <GridCol width={50}>
-                                        <Button openPanel="right">Right Panel</Button>
-                                    </GridCol>
-                                </GridRow>
-                            </ContentBlock>
                             <ContentBlockTitle>Modals</ContentBlockTitle>
                             <ContentBlock>
                                 <GridRow>
@@ -95,6 +80,10 @@ class MainViews extends React.Component {
                                     </GridCol>
                                 </GridRow>
                             </ContentBlock>
+                            <ContentBlockTitle>Routes</ContentBlockTitle>
+                            <List>
+                                {routes.map((route, i) => <ListItem key={i} link={route.path} title={route.path}/>)}
+                            </List>
                         </Page>
                     </Pages>
                 </View>
