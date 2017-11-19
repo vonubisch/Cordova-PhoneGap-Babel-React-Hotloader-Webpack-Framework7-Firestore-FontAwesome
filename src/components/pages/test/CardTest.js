@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     Page,
+    Button,
     Card,
     CardHeader,
     CardContent,
@@ -14,7 +15,7 @@ const styles = {
         height: '40vw',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: 'url(http://lorempixel.com/400/200/)'
+        backgroundImage: 'url(http://lorempixel.com/800/800/)',
     }
 };
 
@@ -24,9 +25,9 @@ export const CardTest = () => (
         <ContentBlockTitle>
             Minimal card
         </ContentBlockTitle>
-        <Card title="Card Title" content="Card Content" footer="Card Footer" />
+        <Card content="Card Content" />
         <ContentBlockTitle>
-            Custom card
+            Card with header and fouter
         </ContentBlockTitle>
         <Card>
             <CardHeader>Card header content</CardHeader>
@@ -34,12 +35,18 @@ export const CardTest = () => (
             <CardFooter>Card footer content</CardFooter>
         </Card>
         <ContentBlockTitle>
-            Card with header
+            Card with image header and actions
         </ContentBlockTitle>
         <Card>
-            <CardHeader valign="bottom" className="card-header color-white no-border" style={styles.header}>Card header content</CardHeader>
+            <CardHeader verticalAlign="bottom" className="card-header color-white no-border" style={styles.header}>
+                Card header content
+            </CardHeader>
             <CardContent>Card content</CardContent>
-            <CardFooter>Card footer content</CardFooter>
+            <CardFooter>
+                <Button color="blue">Like</Button>
+                <Button color="gray">Comments</Button>
+                <Button color="gray">Subscribe</Button>
+            </CardFooter>
         </Card>
     </Page>
 );
