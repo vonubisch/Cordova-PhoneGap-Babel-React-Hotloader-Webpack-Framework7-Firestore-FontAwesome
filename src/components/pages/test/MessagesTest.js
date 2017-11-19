@@ -3,7 +3,7 @@ import {
     Page,
     Message,
     Messages,
-    Messagebar,
+    // Messagebar,
     Navbar,
 } from 'framework7-react';
 
