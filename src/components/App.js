@@ -13,10 +13,11 @@ import AppPopup        from 'components/Popup';
 import AppLoginScreen  from 'components/Login';
 import AppActions      from 'components/Actions';
 
-let framework7, currentRoute = null;
+let framework7, currentRoute, appInstance = null;
 
 export const getFramework7 = () => framework7;
 export const getCurrentRoute = () => currentRoute;
+export const getApp = () => appInstance;
 
 export class App extends React.Component {
 
@@ -29,6 +30,7 @@ export class App extends React.Component {
         };
         this.popup = this.popup.bind(this);
         this.actions = this.actions.bind(this);
+        this.loading = this.loading.bind(this);
     }
 
     loading(loading) {
@@ -51,6 +53,8 @@ export class App extends React.Component {
                 onRouteChange={route => currentRoute = route}
                 themeType="material"
                 pushState={true}
+                pushStateSeparator={"#!"}
+                onPageBeforeInit={(app, page) => console.log('Opening new page (app, page):', app, page)} // eslint-disable-line no-console
                 routes={routes}
             >
                 <Statusbar/>
