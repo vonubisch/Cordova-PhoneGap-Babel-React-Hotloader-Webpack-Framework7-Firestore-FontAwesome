@@ -9,8 +9,10 @@ import {
     Navbar,
 } from 'framework7-react';
 
+import {getRoute, generateURL} from 'router';
+
 export const RouteTest = (props, context) => {
-    const route = context.framework7AppContext.getCurrentRoute();
+    const router = context.framework7AppContext.getCurrentRoute();
     return (
         <Page>
             <Navbar backLink="Back" title="Route" sliding="sliding" />
@@ -26,13 +28,15 @@ export const RouteTest = (props, context) => {
             </ContentBlockTitle>
             <ContentBlock>
                 <List>
-                    <ListItem title="Route" badge={JSON.stringify(route.route)} />
-                    <ListItem title="Url" badge={route.url} />
-                    <ListItem title="Path" badge={route.path} />
-                    <ListItem title="User ID" badge={route.params.userId} />
-                    <ListItem title="Post ID" badge={route.params.postId} />
-                    <ListItem title="Query" badge={JSON.stringify(route.query)} />
-                    <ListItem title="Hash" badge={route.hash} />
+                    <ListItem title="Route" badge={JSON.stringify(router.route)} />
+                    <ListItem title="Url" badge={router.url} />
+                    <ListItem title="Path" badge={router.path} />
+                    <ListItem title="User ID" badge={router.params.userId} />
+                    <ListItem title="Post ID" badge={router.params.postId} />
+                    <ListItem title="Query" badge={JSON.stringify(router.query)} />
+                    <ListItem title="Hash" badge={router.hash} />
+                    <ListItem title="Get route by path" badge={JSON.stringify(getRoute(router.route.pagePath))} />
+                    <ListItem title="Generate URL" badge={generateURL('RouteTest', {userId: 10, postId: 20})} />
                 </List>
             </ContentBlock>
         </Page>

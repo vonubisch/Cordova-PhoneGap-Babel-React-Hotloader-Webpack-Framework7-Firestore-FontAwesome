@@ -5,7 +5,7 @@ import {
     Progressbar
 }                      from 'framework7-react';
 
-import {routes}        from 'routes';
+import {routes}        from 'router';
 import LeftPanel       from 'components/LeftPanel';
 import RightPanel      from 'components/RightPanel';
 import MainViews       from 'components/Main';

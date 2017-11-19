@@ -20,7 +20,7 @@ import {
     GridCol,
     Button,
 } from 'framework7-react';
-import {routes} from 'routes';
+import {routes} from 'router';
 
 class MainViews extends React.Component {
 
