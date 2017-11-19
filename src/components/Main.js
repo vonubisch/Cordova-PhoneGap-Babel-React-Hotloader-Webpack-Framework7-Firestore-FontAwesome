@@ -19,7 +19,7 @@ import {
     GridCol,
     Button,
 } from 'framework7-react';
-
+import {routes} from 'routes';
 
 class MainViews extends React.Component {
 
@@ -71,9 +71,7 @@ class MainViews extends React.Component {
                             </ContentBlock>
                             <ContentBlockTitle>Navigation</ContentBlockTitle>
                             <List>
-                                <ListItem link="/about/" title="About"/>
-                                <ListItem link="/form/" title="Form"/>
-                                <ListItem link="/firebase-test/" title="Firebase test"/>
+                                {routes.map((route, i) => <ListItem key={i} link={route.path} title={route.path}/>)}
                             </List>
                             <ContentBlockTitle>Side Panels</ContentBlockTitle>
                             <ContentBlock>
