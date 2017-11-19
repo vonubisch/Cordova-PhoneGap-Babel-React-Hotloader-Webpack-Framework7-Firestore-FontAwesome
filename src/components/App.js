@@ -50,6 +50,7 @@ export class App extends React.Component {
                 onFramework7Init={f7 => framework7 = f7}
                 onRouteChange={route => currentRoute = route}
                 themeType="material"
+                pushState={true}
                 routes={routes}
             >
                 <Statusbar/>
