@@ -15,7 +15,7 @@
     "file-loader": "^1.1.5",
     "firebase": "^4.6.2",
     "firestore": "^1.1.6",
-    "firestore-react": "^0.1.4",
+    "firestore-react": "^0.1.5",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.5-beta.2",
     "framework7": "^1.6.5",
